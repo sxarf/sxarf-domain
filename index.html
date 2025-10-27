@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sxarf's domain</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+
+        }
+
+    h1 {
+      font-size: 3em;
+      color: #60666b;
+      animation: slideFade 3s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes slideFade {
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+
+    @keyframes slidefromside {
+        0% {
+            transform: translateX(-250px);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(0);
+        opacity: 1;
+      }
+    }
+
+
+        p {
+            color: #ffffff;
+            font-size: 2em;
+        }
+
+        information {
+            color: #ffffff;
+            font-size: medium;
+            animation: slidedownfade 3s ease-out forwards;
+        }
+        /* Top options bar */
+        .top-bar {
+            background-color: #1a1818;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar .logo {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .top-bar .options a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        .middle-bar {
+            background-color: #1a1818;
+            color: white;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .middle-bar .logo {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .middle-bar .options a {
+            color: white;
+            text-decoration: none;
+            margin-left: 40px;
+            transition: color 0.3s;
+        }
+        .middle-bar .options a:hover {
+            color: #00bfff;
+        }
+
+        .top-bar .options a:hover {
+            color: #00bfff;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #333638;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+.gunslol-profile {
+  width: 320px;
+  margin: 40px auto;
+  padding: 25px 20px;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  background: #111; /* inner background */
+  z-index: 0;
+}
+
+/* Border effect using gradient + background-clip */
+.gunslol-profile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 2px; /* border thickness */
+  background: linear-gradient(90deg, #fff, #444, #fff);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.gunslol-profile .pfp {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.gunslol-profile h2 {
+  font-size: 1.5em;
+  margin: 10px 0 5px;
+}
+
+.gunslol-profile p {
+  font-size: 0.95em;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.profile-link {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #fff;
+  color: #000;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s;
+}
+
+.profile-link:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  animation: slideUp 1s ease-out forwards;
+}
+
+.link {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  margin: 8px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.link:hover {
+  transform: scale(1.08);
+}
+
+/* 🎧 Discord */
+.link-discord {
+  background: linear-gradient(45deg, #5865F2, #4854C7);
+  box-shadow: 0 0 15px rgba(88, 101, 242, 0.6);
+}
+.link-discord:hover {
+  box-shadow: 0 0 25px rgba(88, 101, 242, 0.9);
+}
+
+/* 🔴 YouTube */
+.link-youtube {
+  background: linear-gradient(45deg, #ff0000, #cc0000);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+}
+.link-youtube:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.9);
+}
+
+/* 🐦 Twitter (X) */
+.link-twitter {
+  background: linear-gradient(45deg, #1da1f2, #0d8ce0);
+  box-shadow: 0 0 15px rgba(29, 161, 242, 0.6);
+}
+.link-twitter:hover {
+  box-shadow: 0 0 25px rgba(29, 161, 242, 0.9);
+}
+
+/* 🎵 TikTok */
+.link-tiktok {
+  background: linear-gradient(45deg, #25f4ee, #000000, #fe2c55);
+  box-shadow: 0 0 15px rgba(254, 44, 85, 0.5);
+}
+.link-tiktok:hover {
+  box-shadow: 0 0 25px rgba(254, 44, 85, 0.8);
+}
+
+
+.badge {
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #333;
+  box-shadow: 0 0 10px rgba(255,255,255,0.15);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+/* Color styles */
+.badge-owner {
+  background: linear-gradient(45deg, #ff0050, #ff6b81);
+  box-shadow: 0 0 10px rgba(255, 0, 80, 0.5);
+}
+
+.badge-vip {
+  background: linear-gradient(45deg, #ffd700, #ffae00);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.badge-dev {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  box-shadow: 0 0 10px rgba(0, 114, 255, 0.5);
+}
+
+.badge-maindev {
+  background: linear-gradient(45deg, #a34a4a, #0072ff);
+  box-shadow: 0 0 10px rgba(0, 114, 255, 0.5);
+}
+
+/* Slide animation */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+        button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+<div class="top-bar">
+    <div class="logo">sxarf's domain</div>
+    <div class="options">
+        <button onclick="window.location.href='index.html'">Home</button>
+        <button onclick="window.location.href='projects.html'">Projects</button>
+    </div>
+</div>
+<!-- This is now outside the top-bar -->
+<div class="gunslol-profile">
+  <img src="thedarktriad.jfif" alt="Profile Picture" class="pfp">
+  <h2>sxarf</h2>
+  <p>a goofball on the internet. programs in: cpp (shit at it), lua, and mods gtag (c#)
+</p>
+  <div class="badges">
+  <span class="badge badge-owner">Owner</span>
+  <span class="badge badge-vip">Elite</span>
+  <span class="badge badge-dev">Developer</span>
+  </div>
+  <div class="badges">
+    <span class="badge badge-maindev">main Developer</span>
+  </div>
+  <div class="links">
+<div class="links">
+  <a href="https://discord.gg/H3s2v5QzUJ" class="link link-discord">Discord</a>
+  <a href="https://tiktok.com/@example" class="link link-tiktok">TikTok</a>
+</div>
+
+  </div>
+</div></div>
+</div>
+</div>
+</body>
+</html>
